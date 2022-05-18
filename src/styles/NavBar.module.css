@@ -2,3 +2,11 @@
     border: 1px solid #FFF;
     font-family: 'Koulen', cursive;
 }
+
+.NavLink {
+    padding: 8px;
+}
+
+.Active i {
+    color: rgb(199, 37, 37);
+}

@@ -2,6 +2,11 @@
     font-family: 'Rubik', sans-serif;
     min-height: 100vh;
     background-color: black;
+    color: #FFF;
+}
+
+.Main {
+  padding-top: 120px;
 }
 
 * {
@@ -9,13 +14,13 @@
   }
   
   a {
-    color: #555555;
+    color: #FFF;
     transition: color ease-in-out 0.3s;
   }
   
   a:hover {
     text-decoration: none;
-
+    color: black;
   }
   
   a:hover i {
