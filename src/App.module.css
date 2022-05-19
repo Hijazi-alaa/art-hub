@@ -1,31 +1,43 @@
 .App {
     font-family: 'Rubik', sans-serif;
-    min-height: 100vh;
-    background-color: black;
+    background-color: #111010;
     color: #FFF;
-}
-
-.Main {
-  padding-top: 120px;
-}
-
-* {
+    min-height: 100vh;
+  }
+  
+  
+  .Main {
+    padding-top: 81px;
+  }
+  
+  .Content {
+    background-color: #343a40;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+  }
+  
+  * {
     box-sizing: border-box;
   }
   
   a {
     color: #FFF;
     transition: color ease-in-out 0.3s;
+    text-decoration: none;
   }
   
   a:hover {
     text-decoration: none;
-    color: black;
   }
   
   a:hover i {
-    color: black;
+    color: #b26e21;
     transition: color ease-in-out 0.3s;
+  }
+  
+  input[type="file"] {
+    display: none;
   }
   
   i {
@@ -38,5 +50,23 @@
   i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: black;
+    color: orange;
+  }
+  
+  figure {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
