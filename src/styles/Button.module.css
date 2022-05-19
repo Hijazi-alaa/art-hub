@@ -32,32 +32,14 @@
   width: 100%;
 }
 
-.Red,
+
 .RedOutline:hover,
-.Bright:hover {
+.Red:hover {
   background-color: grey;
   color: #ffffff;
 }
 
-.BlueOutline,
-.Blue:hover {
-  background-color: grey;
-  color: #C72525;
-}
-
-.Black,
-.BlackOutline:hover {
-  background-color: grey;
-  color: aliceblue;
-}
-
-.Black:hover,
-.BlackOutline {
-  background-color: aliceblue;
-  color: #242a3d;
-}
-
-.Bright {
+.Red {
   background-color: #C72525;
   color: #FFFF;
 }
