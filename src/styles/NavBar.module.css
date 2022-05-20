@@ -7,6 +7,11 @@
     padding: 8px;
 }
 
+.NavLink:hover {
+    color: #c01111;
+}
+
+
 .Active i {
     color: #C72525;
 }
