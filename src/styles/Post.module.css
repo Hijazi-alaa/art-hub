@@ -1,0 +1,29 @@
+.Post {
+    background-color: #343a40;
+    border: 1px solid #dadadf;
+    border-radius: 1px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+  }
+
+.Description {
+  font-family: 'Roboto', sans-serif;
+}
+  
+  .Post figure,
+  h5 {
+    margin: 0 0;
+  }
+  
+  .Heart {
+    color: #FFF;
+  }
+  
+  .Heart:hover {
+    color: #c01111;
+  }
+  
+  .HeartOutline:hover {
+    color: #db715f;
+  }
