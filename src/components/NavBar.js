@@ -6,11 +6,14 @@ import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 import axios from "axios";
+import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
+
+    const {expanded, setExpanded, ref} = useClickOutsideToggle();
   
     const handleSignOut = async () => {
       try {
@@ -52,14 +55,16 @@ const NavBar = () => {
           </NavLink>
         </>
       );
+
     const loggedOutLinks = (
     <>
     <NavLink className={styles.NavLink} activeClassName={styles.Active}  to="/signin"><i class="fa-solid fa-right-to-bracket"></i><br></br>Sign in</NavLink>
     <NavLink className={styles.NavLink} activeClassName={styles.Active}  to="/signup"><i class="fa-solid fa-user-plus"></i><br></br>Sign up</NavLink>
     </>
     );
+
   return (
-    <Navbar className={styles.NavBar} expand="md" bg="dark" variant="dark" fixed="top">
+    <Navbar expanded={expanded} className={styles.NavBar} expand="md" bg="dark" variant="dark" fixed="top">
         <Container>
             <NavLink to="/" >
                 <Navbar.Brand>
@@ -67,8 +72,9 @@ const NavBar = () => {
                 </Navbar.Brand>
             </NavLink>
             {currentUser && addPostIcon}
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
+            <Navbar.Toggle ref={ref}
+            onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto text-left">
                     
                     {currentUser ? loggedInLinks : loggedOutLinks }
