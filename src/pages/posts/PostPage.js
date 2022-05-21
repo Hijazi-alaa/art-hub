@@ -21,7 +21,6 @@ function PostPage() {
                     axiosReq.get(`/posts/${id}`),
                 ]);
                 setPost({ results: [post] });
-                console.log(post);
             } catch (err) {
                 console.log(err);
             }
@@ -32,14 +31,10 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={10}>
-        <p>Popular profiles small screen size</p>
-        <Post {...post.results[0]} setPosts={setPost} PostPage />
+        <Post {...post.results[0]} setPosts={setPost} postPage={true} />
         <Container className={appStyles.Content}>
           Comments
         </Container>
-      </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for large screen size
       </Col>
     </Row>
   );
