@@ -69,7 +69,7 @@ const Post = (props) => {
           {title && <Card.Title className="text-center">{title}</Card.Title>}
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage}
+            {is_owner && postPage && "..."}
           </div>
         </Media>
       </Card.Body>

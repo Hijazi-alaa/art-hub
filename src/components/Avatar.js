@@ -9,7 +9,7 @@ const Avatar = ({src, height=45, text}) => {
         alt="avatar" />
         {text}
     </span>
-  )
-}
+  );
+};
 
 export default Avatar

@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 
+
 function PostPage() {
     const {id} = useParams();
     const [post, setPost] = useState({ results: [] });
@@ -30,7 +31,7 @@ function PostPage() {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={10}>
         <p>Popular profiles small screen size</p>
         <Post {...post.results[0]} setPosts={setPost} PostPage />
         <Container className={appStyles.Content}>

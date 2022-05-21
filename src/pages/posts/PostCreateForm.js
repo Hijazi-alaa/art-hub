@@ -25,7 +25,7 @@ function PostCreateForm() {
     description: "",
     image: "",
   });
-  const {title, description, image } = postData;
+  const { title, description, image } = postData;
 
   const imageInput = useRef(null)
   const history = useHistory()
@@ -48,7 +48,7 @@ function PostCreateForm() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const formData = new FormData();
     formData.append("title", title)
     formData.append("description", description)
@@ -63,7 +63,7 @@ function PostCreateForm() {
         setErrors(err.response?.data)
       }
     }
-  }
+  };
 
 
   const textFields = (
