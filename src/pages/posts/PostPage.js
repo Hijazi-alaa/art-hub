@@ -61,6 +61,7 @@ function PostPage() {
               <InfiniteScroll
                 children={comments.results.map((comment) => (
                   <Comment
+                  
                     key={comment.id}
                     {...comment}
                     setPost={setPost}
