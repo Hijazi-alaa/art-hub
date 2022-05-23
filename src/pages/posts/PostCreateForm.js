@@ -5,7 +5,8 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import { Alert, Image } from "react-bootstrap";
+import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 
 import Upload from "../../assets/upload.png";
 
@@ -61,7 +62,7 @@ function PostCreateForm() {
       const {data} = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`)
     } catch(err){
-      console.log(err)
+      //console.log(err)
       if (err.response?.status !== 401){
         setErrors(err.response?.data)
       }

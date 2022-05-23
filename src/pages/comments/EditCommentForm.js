@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
-import { axiosRes } from "../../api/axiosDefaults";
 
+import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentAddEditForm.module.css";
 
 function EditCommentForm(props) {
@@ -34,7 +34,7 @@ function EditCommentForm(props) {
       }));
       setShowEditForm(false);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
