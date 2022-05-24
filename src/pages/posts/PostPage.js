@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 import appStyles from "../../App.module.css";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import AddCommentForm from "../comments/AddCommentForm";
@@ -26,16 +26,12 @@ function PostPage() {
 
     useEffect(() => {
         const handleMount = async () => {
-            try {
                 const [{ data: post }, {data: comments}] = await Promise.all([
                     axiosReq.get(`/posts/${id}`),
-                    axiosReq.get(`/comments/?posts=${id}`)
+                    axiosReq.get(`/comments/?post=${id}`)
                 ]);
                 setPost({ results: [post] });
                 setComments(comments);
-            } catch (err) {
-                //console.log(err);
-            }
         };
         handleMount();
     }, [id]);
@@ -43,7 +39,6 @@ function PostPage() {
     return (
       <Row className="h-100">
         <Col className="py-2 p-0 p-lg-2" lg={10}>
-          <p>Popular profiles for mobile</p>
           <Post {...post.results[0]} setPosts={setPost} postPage />
           <Container className={appStyles.Content}>
             {currentUser ? (

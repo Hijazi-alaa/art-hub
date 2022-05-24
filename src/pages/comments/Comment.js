@@ -27,7 +27,7 @@ const Comment = (props) => {
                     comments_count: prevPost.results[0].comments_count - 1
                 }]
             }))
-            setComments(prevComments => ({
+            setComments((prevComments) => ({
                 ...prevComments,
                 results: prevComments.results.filter(comment => comment.id !== id),
             }))

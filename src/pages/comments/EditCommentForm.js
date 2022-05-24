@@ -16,7 +16,7 @@ function EditCommentForm(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
+
       await axiosRes.put(`/comments/${id}/`, {
         content: formContent.trim(),
       });
@@ -33,9 +33,6 @@ function EditCommentForm(props) {
         }),
       }));
       setShowEditForm(false);
-    } catch (err) {
-      //console.log(err);
-    }
   };
 
   return (

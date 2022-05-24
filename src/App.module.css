@@ -63,11 +63,11 @@
     width: 5px;
   }
   *::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #FFF;
   }
   *::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #c01111
   }
   *::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: black
   }

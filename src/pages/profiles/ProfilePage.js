@@ -32,7 +32,6 @@ function ProfilePage() {
 
   useEffect(() => {
       const fetchData = async () => {
-          try {
             const [{data: pageProfile}, { data: profilePosts }] = await Promise.all([
                 axiosReq.get(`/profiles/${id}/`),
                 axiosReq.get(`/posts/?owner__profile=${id}`),
@@ -43,9 +42,6 @@ function ProfilePage() {
             }))
             setProfilePosts(profilePosts);
             setHasLoaded(true);
-          } catch(err) {
-            //console.log(err)
-          }
       }
       fetchData()
   }, [id, setProfileData]);
@@ -62,8 +58,10 @@ function ProfilePage() {
           <h3 className="m-2">{profile?.owner}</h3>
           <Row className="justify-content-center no-gutters">
                <Col xs={4} className="my-2">
+                  <h5>Posts shared</h5>
+                  <hr/>
                    <div>{profile?.posts_count}</div>
-                   <div>Posts shared</div>
+                   
                </Col>
           </Row>
         </Col>

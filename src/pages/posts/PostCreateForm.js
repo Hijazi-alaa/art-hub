@@ -62,7 +62,6 @@ function PostCreateForm() {
       const {data} = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`)
     } catch(err){
-      //console.log(err)
       if (err.response?.status !== 401){
         setErrors(err.response?.data)
       }
@@ -114,7 +113,7 @@ function PostCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+        <Col className="py-2 p-0 p-md-2" md={10} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
@@ -136,7 +135,7 @@ function PostCreateForm() {
                 className="d-flex justify-content-center"
                 htmlFor="image-upload"
               >
-                <Asset src={Upload} message="Click or tab to upload your art"/>
+                <Asset src={Upload} message="Click to upload your art"/>
               </Form.Label>
 
               )}

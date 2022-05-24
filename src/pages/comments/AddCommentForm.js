@@ -18,7 +18,6 @@ function AddCommentForm(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
       const { data } = await axiosRes.post("/comments/", {
         content,
         post,
@@ -36,9 +35,6 @@ function AddCommentForm(props) {
         ],
       }));
       setContent("");
-    } catch (err) {
-      //console.log(err);
-    }
   };
 
   return (
