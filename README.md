@@ -3,6 +3,14 @@
 Art Hub is a place for users from all over the world to share and view Art posts, like or dislike or comment opinions on a certain post.
 It is designed to be a social space for artists or art lovers to get inspired or share inspirations with others.
 Whether It's a painting a photograph or a sculpture Art Hub's goal is to make it easy to share with the rest of the world.
+<br>
+
+[Deployed Site](https://arthub-react.herokuapp.com/)
+<br>
+
+[API repository](https://github.com/Hijazi-alaa/My-api)
+
+<img src="readme-images/responsive.png">
 
 ## Main functionalities
 <hr>
