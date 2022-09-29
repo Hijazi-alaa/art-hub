@@ -1,8 +1,8 @@
-import axios from 'axios';
+import from '';
 
-axios.defaults.baseURL = "https://arthub-api.herokuapp.com/"
-axios.defaults.headers.post["Content-Type"] = 'multipart/form-data'
-axios.defaults.withCredentials = true;
+.defaults.baseURL = "https://arthub-api.herokuapp.com/"
+    .defaults.headers.post["Content-Type"] = 'multipart/form-data'
+    .defaults.withCredentials = true;
 
-export const axiosReq = axios.create();
-export const axiosRes = axios.create();
+export const Req = .create();
+export const Res = .create();
